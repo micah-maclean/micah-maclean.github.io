@@ -1,0 +1,153 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>Michaela Maclean</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="Michaela Maclean">
+
+  <link rel="stylesheet" href="styles.css"></link>
+  <script src="https://kit.fontawesome.com/0d5462182b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header">
+            <h1>Hi, I am Michaela Maclean!</h1>
+            <a href="#about"><i class="fas fa-arrow-circle-down"></i></a>
+        </div>
+    </header>
+    <section id="about">
+        <h1>About me</h1>
+        <div class="wrapper">
+            <img src="images/Gif.gif" class="desktop">
+
+            <div class="about-text">
+                <p>Hello, my name is <b>Michaela</b>. I am a highschool student with a passion for technology.</p>
+                <p>I started coding in highschool when I took Computer Science classes, and I fell in love with coding. I first learned to code in java with OOP fundaments, but I am now learning Web Development.</p>
+            </div>
+
+        </div>
+            
+    </section>
+    <section id="tools">
+        <h1>My Toolbox</h1>
+        <div class="grid-container">
+            <div class="grid-item">
+                <i class="fab fa-html5 tool-icon"></i>
+                <p>HTML</p>
+            </div>
+            <div class="grid-item">
+                <i class="fab fa-css3-alt tool-icon"></i>
+                <p>CSS</p>
+            </div>
+            <div class="grid-item">
+                <i class="fab fa-js-square tool-icon"></i>
+                <p>Javascript</p>
+            </div>
+            <div class="grid-item">
+                <i class="fab fa-java tool-icon"></i>
+                <p>Java</p>
+            </div>
+            <div class="grid-item">
+                <i class="fab fa-github tool-icon"></i>
+                <p>Github</p>
+            </div>
+            <div class="grid-item">
+                <i class="fab fa-figma tool-icon"></i>
+                <p>Figma</p>
+            </div>
+        </div>
+
+    </section>
+    <section id="project">
+        <h1>Projects</h1>
+        <div class="wrapper" id="project-card-one">
+            <img src="images/Flappy-bird.jpg" alt="Girl in a jacket" >
+            <div class="project-card-text" id="project-card-one-text">
+                <h2>Flappybird</h2>
+                <p>In this project, I coded the once popular mobile game "Flappybird" in Processing.</p>
+                <a href="https://github.com/mickey-maclean/Flappybird" target="_blank" class="button"><i class="fab fa-github"></i>
+                    Github</a>
+            </div>
+        </div>
+        <div class="wrapper" id="project-card-two">
+            <div class="project-card-text" id="project-card-two-text">
+                <h2>Chess</h2>
+                <p>Final project coded in Java using Object-Orientated Programming fundamentals.</p>
+                <a href="https://github.com/mickey-maclean/Chess" target="_blank" class="button"><i class="fab fa-github"></i>
+                    Github</a> 
+            </div>
+            <img src="images/Chess.png">   
+        </div>
+        <div class="wrapper" id="project-card-three">
+            <img src="images/Tetris.png">
+            <div class="project-card-text" id="project-card-three-text">
+                <h2>Tetris</h2>
+                <p>Coded in Javascript following a basics tutorial.</p> 
+                <div>
+                    <a href="https://github.com/mickey-maclean/Tetris" target="_blank" class="button"><i class="fab fa-github"></i>
+                    Github</a>  
+                    <a href="https://mickey-maclean.github.io/Tetris/" target="_blank" class="button"><i class="fas fa-link"></i>
+                    Live Link</a>
+                </div>  
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1>Get in touch</h1>
+        <div class="wrapper">
+
+            <div class="contact-left">
+
+                <p>Thanks for stopping by! If you are looking to collaborate on a project or would like to chat further, please don't hesitate to reach out.</p>
+                <h2>Let's connect:</h2>
+                <ul class="social">
+                   <li> <!--Linkedin link-->
+                        <a href="https://www.linkedin.com/in/michaela-maclean-a578821a2/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <p class="desktop">Michaela Maclean</p>
+                        </a>
+                   </li>
+                   <li> <!--Github link-->
+                        <a href="https://github.com/micah-maclean" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <p class="desktop">micah-maclean</p>
+                        </a>
+                   </li>
+                   <li> <!--Discord link-->
+                        <a href="https://discordapp.com/users/773029646853341194" target="_blank">
+                            <i class="fab fa-discord"></i>
+                            <p class="desktop">micah</p>
+                        </a>
+                   </li>
+                </ul>  
+
+            </div>
+
+            <!-- Send Direct Message Form -->
+            <form action="https://formspree.io/f/mwkakzea" method="POST">
+                <label for="name" aria-required="true" class="visuallyHidden">Name:</label>
+                <input type="text" name="name" id="name" required placeholder="Name*">
+                <label for="_replyto" aria-required="true" class="visuallyHidden">Email:</label>
+                <input type="email" name="_replyto" id="_replyto" required placeholder="Email*">
+                <label for="message" aria-required="true" class="visuallyHidden">Message:</label>
+                <textarea name="message" id="message" required placeholder="Message*"></textarea>
+                <input type="submit" class="button" value="Message">
+            </form>
+
+        </div>  
+    </section>
+
+    <footer>
+        <p>Designed and coded by Michaela Maclean 2021</p>
+    </footer>
+    
+</body>
+
+</html>
