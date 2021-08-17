@@ -230,16 +230,12 @@ a{
     width: 450px;
     height: 225px;
 }
-#project-card-one-text{
+#project-card-one-text, #project-card-three-text{
     align-items: flex-start; 
     width: 50%;
 }
-#project-card-two-text{
+#project-card-two-text, #project-card-four-text{
     align-items: flex-end;
-    width: 50%;
-}
-#project-card-three-text{
-    align-items: flex-start;
     width: 50%;
 }
 #contact i{
@@ -286,10 +282,10 @@ a{
     #project-card-one, #project-card-three{
         flex-direction: column;
     }
-    #project-card-two{
+    #project-card-two, #project-card-four{
         flex-direction: column-reverse;
     }
-    #project-card-one-text, #project-card-two-text, #project-card-three-text{
+    #project-card-one-text, #project-card-two-text, #project-card-three-text, #project-card-four-text{
         width: 100%;
         height: 100%;
         align-items: flex-start;
