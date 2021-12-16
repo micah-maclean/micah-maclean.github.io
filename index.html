@@ -5,59 +5,108 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  
-  <title>Michaela Maclean</title>
+  <title>Micah Maclean</title>
   <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
   <meta name="description" content="Online portfolio of Micah Maclean ">
-  <meta name="author" content="Michaela Maclean">
+  <meta name="author" content="Micah Maclean">
 
   <link rel="stylesheet" href="styles.css"></link>
   <script src="https://kit.fontawesome.com/0d5462182b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header id="header">
-        <div class="header">
+    <div class="nav-toogle">
+        <i class="fas fa-bars fa-fw toogle-icon"></i>
+    </div>
+
+    <nav data-visible="false"> 
+        <ul class="anchor-list">
+            <li>
+                <a class="anchor-link" href="#home-anchor">Home</a>
+            </li>
+            <li>
+                <a class="anchor-link" href="#about-anchor">About</a>
+            </li>
+            <li>
+                <a class="anchor-link" href="#tools-anchor">Skills</a>
+            </li>
+            <li>
+                <a class="anchor-link" href="#project-anchor">Projects</a>
+            </li>
+            <li>
+                <a class="anchor-link" href="#contact-anchor">Contact</a>
+            </li>
+            <li>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://linkedin.com/in/2micah" target="_blank">
+                            <i class="fab fa-linkedin fa-fw"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://discordapp.com/users/773029646853341194" target="_blank">
+                            <i class="fab fa-discord fa-fw"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/micah-maclean" target="_blank">
+                            <i class="fab fa-github fa-fw"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section  class="home" id="home-anchor">
+        <div class="home-content">
             <h1>Hi, I am Micah Maclean!</h1>
-            <a href="#about"><i class="fas fa-arrow-circle-down"></i></a>
-        </div>
-    </header>
-    <section id="about">
+            <a href="#about-anchor"><i class="fas fa-arrow-circle-down"></i></a>
+        </div>    
+    </section>
+
+    <section class="about" id="about-anchor">
         <h1>About me</h1>
         <div class="wrapper">
             <img src="images/Gif.gif" class="desktop">
 
             <div class="about-text">
-                <p>Hello, I'm <b>Micah</b>. I am a highschool student with a passion for technology.</p>
+                <p>Hello, I'm <b>Micah</b>. I am a highschool graduate with a passion for technology.</p>
                 <p>I started coding in highschool when I took Computer Science classes, and I fell in love with coding. I first learned to code in java with OOP fundaments, but I am now learning Web Development.</p>
             </div>
 
         </div>
             
     </section>
-    <section id="tools">
+
+    <section class="tools" id="tools-anchor">
         <h1>My Toolbox</h1>
         <div class="grid-container">
             <div class="grid-item">
                 <i class="fab fa-html5 tool-icon"></i>
                 <p>HTML</p>
             </div>
+
             <div class="grid-item">
                 <i class="fab fa-css3-alt tool-icon"></i>
                 <p>CSS</p>
             </div>
+
             <div class="grid-item">
                 <i class="fab fa-js-square tool-icon"></i>
                 <p>Javascript</p>
             </div>
+
             <div class="grid-item">
                 <i class="fab fa-java tool-icon"></i>
                 <p>Java</p>
             </div>
+
             <div class="grid-item">
                 <i class="fab fa-github tool-icon"></i>
                 <p>Github</p>
             </div>
+
             <div class="grid-item">
                 <i class="fab fa-figma tool-icon"></i>
                 <p>Figma</p>
@@ -65,19 +114,22 @@
         </div>
 
     </section>
-    <section id="project">
+
+    <section class="project" id="project-anchor">
         <h1>Projects</h1>
-        <div class="wrapper" id="project-card-one">
-            <img src="images/Flappy-bird.jpg" alt="Girl in a jacket" >
-            <div class="project-card-text" id="project-card-one-text">
+
+        <div class="wrapper project-card-left">
+            <img src="images/Flappy-bird.jpg" alt="" >
+            <div class="project-card-text align-text-left">
                 <h2>Flappybird</h2>
                 <p>In this project, I coded the once popular mobile game "Flappybird" in Processing.</p>
                 <a href="https://github.com/micah-maclean/Flappybird" target="_blank" class="button"><i class="fab fa-github"></i>
                     Github</a>
             </div>
         </div>
-        <div class="wrapper" id="project-card-two">
-            <div class="project-card-text" id="project-card-two-text">
+
+        <div class="wrapper project-card-right">
+            <div class="project-card-text align-text-right">
                 <h2>Chess</h2>
                 <p>Final project coded in Java using Object-Orientated Programming fundamentals.</p>
                 <a href="https://github.com/micah-maclean/Chess" target="_blank" class="button"><i class="fab fa-github"></i>
@@ -85,9 +137,10 @@
             </div>
             <img src="images/Chess.png">   
         </div>
-        <div class="wrapper" id="project-card-three">
+
+        <div class="wrapper project-card-left">
             <img src="images/Tetris.png">
-            <div class="project-card-text" id="project-card-three-text">
+            <div class="project-card-text align-text-left">
                 <h2>Tetris</h2>
                 <p>Coded in Javascript following a basics tutorial.</p> 
                 <div>
@@ -98,8 +151,9 @@
                 </div>  
             </div>
         </div>
-        <div class="wrapper" id="project-card-four">
-            <div class="project-card-text" id="project-card-four-text">
+
+        <div class="wrapper project-card-right">
+            <div class="project-card-text align-text-right">
                 <h2>Todo List</h2>
                 <p>Coded in React following a basics tutorial.</p> 
                 <div>
@@ -111,8 +165,10 @@
             </div>
             <img src="images/Todo-App.png">
         </div>
+
     </section>
-    <section id="contact">
+
+    <section class="contact" id="contact-anchor">
         <h1>Get in touch</h1>
         <div class="wrapper">
 
@@ -122,20 +178,20 @@
                 <h2>Let's connect:</h2>
                 <ul class="social">
                    <li> <!--Linkedin link-->
-                        <a href="https://www.linkedin.com/in/michaela-maclean-a578821a2/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                            <p class="desktop">Michaela Maclean</p>
+                        <a href="https://linkedin.com/in/2micah" target="_blank">
+                            <i class="fab fa-linkedin fa-fw"></i>
+                            <p class="desktop">Micah Maclean</p>
                         </a>
                    </li>
                    <li> <!--Github link-->
                         <a href="https://github.com/micah-maclean" target="_blank">
-                            <i class="fab fa-github"></i>
+                            <i class="fab fa-github fa-fw"></i>
                             <p class="desktop">micah-maclean</p>
                         </a>
                    </li>
                    <li> <!--Discord link-->
                         <a href="https://discordapp.com/users/773029646853341194" target="_blank">
-                            <i class="fab fa-discord"></i>
+                            <i class="fab fa-discord fa-fw"></i>
                             <p class="desktop">micah #4655</p>
                         </a>
                    </li>
@@ -158,9 +214,9 @@
     </section>
 
     <footer>
-        <p>Designed and coded by Michaela Maclean 2021</p>
+        <p>Designed and coded by Micah Maclean 2021</p>
     </footer>
     
 </body>
-
+<script src="script.js"></script> 
 </html>
