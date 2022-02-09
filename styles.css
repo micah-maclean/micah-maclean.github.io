@@ -10,7 +10,7 @@
 
 :root{
     /*Colour Variables */
-    --background:#243447;
+    --base-color:#243447;
     --primary-color: #F2C94C;
     --secondary-color: #1DA1F2;
     --white: #f2f2f2;
@@ -18,6 +18,7 @@
     --grey: #8e8e8e;
 }
 
+/*Menu*/
 .nav-toogle{
     display: block;
     position: fixed;
@@ -30,7 +31,7 @@
     z-index: 10;
 }
 
-.nav-toogle i{
+.toogle-icon{
     font-size: 2.25em;
     padding: 5px;
     color: var(--primary-color);
@@ -60,37 +61,25 @@ nav[data-visible="true"]{
     gap: 25px;
 }
 
-.anchor-list a, .anchor-list a:visited { 
+.anchor-link, .anchor-link:visited { 
+    font-family:'Rubik', sans-serif;
     color: var(--white);
     font-size: 1.5rem;
     text-shadow: 2px 2px 5px var(--black);
 }
-.social-links{
-    gap: 10px;
-}
-.social-links i{
+
+.social-icon{
     font-size: 2em;
 }
+
 
 html{
     font-size: 100%;
     scroll-behavior: smooth;
     
     /*Font Variables*/
-    --header-font: 'Zen Dots', sans-serif;
-    --body-text: 'Rubik', sans-serif;
     line-height: 1.5;
 }
-
-body {
-    background-color:var(--background);
-    color: var(--black);
-}
-
-section {
-    display: block;
-}
-
 
 .visuallyHidden{
     position: absolute !important;
@@ -98,29 +87,76 @@ section {
     left: -9999px !important;
 }
 
-.home{
-    background-image: url("images/Formulas.jpg");
-    height: 100vh;
-    color: var(--primary-color);
+/*General Settings*/
+.title{
+    font-family:'Zen Dots', sans-serif;
+    font-size: 3.25rem;
+    font-weight: 400;
+    padding-bottom: 16px;
 }
 
-.home h1{
-    text-shadow: 1px 1px 2px var(--black), 0 0 25px var(--background), 0 0 5px var(--background);
+.subtitle{
+    font-family:'Rubik', sans-serif;
+    font-size: 2.5rem;
+    font-weight:600;
 }
 
-.about , .project{
-    background-color: var(--primary-color);
+.body-text{
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: justify;
+    padding-bottom: 16px;
 }
 
-.about p, .contact p{
-    text-indent: 2em;
-}
-
-.about p, .contact p, .project p{
+.justify-text{
     text-align: justify;
 }
 
-.tools, .contact{
+.align-text-center{
+    text-align: center;
+}
+
+.paragraph{
+    text-indent: 2em;
+}
+
+.bounce-animation{
+    animation: bounce 2s infinite;
+}
+
+
+/*Home Section*/
+.home{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("images/Formulas.jpg");
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px var(--black), 0 0 25px var(--background), 0 0 5px var(--background);
+}
+
+/*About Section*/
+.about{
+    background-color: var(--primary-color);
+    color: var(--black);
+    min-height: 60vh;
+}
+
+
+
+.contact{
+    background-color: var(--base-color);
+    color: var(--white);
+}
+
+
+/*Tools Section*/
+.tools{
+    background-color: var(--base-color);
     color: var(--white);
 }
 
@@ -135,53 +171,37 @@ section {
     align-items: center;
 }
 
-.tools h1{
-    text-align: center;
-}
-
-.tools ul{    
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.tools li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.tools p{
-    text-align: center;
-}
-
-.tools i{
+.tool-icon{
+    color: var(--primary-color);
     font-size: 5rem;
 }
 
-.tool-icon{
-    color: var(--primary-color);
+/*Project Section*/
+.project{
+    background-color: var(--primary-color);
+    color: var(--black);
 }
 
+.link-text{ /*Fix*/
+    font-family:'Zen Dots', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
 
-h1{
-    font-family: var(--header-font);
+.home-title{
+    font-family:'Zen Dots', sans-serif;
+    font-size: 3.5rem;
     font-weight: 400;
-    padding-bottom: 16px;
+    padding-bottom: 64px;
 }
 
-h2{
-    font-family: var(--body-text);
-    font-weight:600;
+.submit-button{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    border-color: 4px solid var(--white);
 }
 
-p{
-    font-family: var(--body-text);
-    font-weight: 400;
-    padding-bottom: 16px;
-}
-
-a, input[type="submit"]{
+a{
     font-family: var(--body-text);
     font-weight: 600;
 }
@@ -190,16 +210,18 @@ a:link , a:visited{
     text-decoration: none;
 } 
 
-.social a{
+.profile-list a{
     color: var(--white);
     display: flex;
     flex-direction: row;
 }
 
 .button{
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.25rem;
     background-color: var(--white);
     border: 4px solid var(--secondary-color);
-    border-radius: 20px;
+    border-radius: 16px;
     padding: 5px 20px;
 }
 
@@ -214,61 +236,50 @@ ul{
     display: flex;
 }
 
+.no-list-style{
+    list-style: none;
+    display: flex;
+}
 
-form{
+.email-form{
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 10px;
 }
 
-input[type="text"], input[type="email"], textarea{
+.name{
     font-family: var(--body-text);
     font-weight: 400;
     font-size: 20px;
     padding: 10px;
 }
 
-textarea{
+.email{
+    font-family: var(--body-text);
+    font-weight: 400;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.message{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+
     overflow: auto;
     height: 60%;
+    padding: 10px;
 }
 
-.home-content{
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
-.about{
-    flex-direction: row;
-    justify-content: space-around;
-}
 
-.about img{
-    border-color: var(--white) ;
-    border-style: solid;
-    height: 300px;
-    width: 400px;
-}
 
-.home i{
-    font-size: 3rem;
-    color: var(--primary-color);
-    text-shadow: 1px 1px 2px var(--black), 0 0 25px var(--background), 0 0 5px var(--background);
-    animation: bounce 2s infinite;
-}
+.project-image{
+    width: 450px;
+    height: 225px;
 
-.project img{
     border-radius: 32px;
-}
-
-.project-card-text{
-    display: flex;
-    flex-direction: column;
 }
 
 .wrapper{
@@ -276,46 +287,32 @@ textarea{
     gap: 20px;
 }
 
-.contact-left{
-    width: 80%;
+.left-column{
+    display: flex;
+    flex-direction: column;
+    padding-right: 16px;
+}
+
+.right-column{
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
 }
 
 footer{
     background-color: var(--white);
-    text-align: center;
 }
 
-footer p{
+.footer-text{
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
     padding: 4px 0;
 }
 
 /* Desktop and Laptop*/
 section{
     padding: 50px 80px;
-}
-
-.contact{
-    padding: 100px 80px;
-}
-
-h1{
-    font-size: 3.25rem;
-}
-
-.home h1{
-    font-size: 3.5rem;
-}
-
-h2{
-    font-size: 2.5rem;
-}
-
-h3{
-    font-size: 2rem;
-}
-
-p, a{
-    font-size: 1.25rem;
 }
 
 .wrapper{
@@ -327,10 +324,7 @@ p, a{
     padding-bottom: 32px;
 }
 
-.project img{
-    width: 450px;
-    height: 225px;
-}
+
 
 .align-text-left{
     align-items: flex-start; 
@@ -342,22 +336,13 @@ p, a{
     width: 50%;
 }
 
-.contact i{
-    height: 50px;
-    font-size: 2em;
-}
-
-.social{
+.profile-list{
     flex-direction: column;
-}
-
-.social p{
-    text-indent: 1rem;
 }
 
 /* Tablet */
 @media (max-width: 990px) {
-    section, .contact{
+    section{
         padding: 20px;
     }
 
@@ -365,32 +350,32 @@ p, a{
         display: none;
     }
 
-    h1{
+    .title{
         font-size: 2rem;        
     }
 
-    .home h1{
+    .home-title{
         font-size: 2.5rem;
     }
 
-    h2{
+    .subtitle{
         font-size: 1.75rem;
     }
 
-    h3{
-        font-size: 1.5rem;
-    }
-
-    p, a, input{
+    .body-text{
         font-size: 1rem;
     }
 
-    .project img{
+    .submit-button{
+        font-size: 1rem; 
+    }
+
+    .project-image{
         width: 100%;
         height: auto;
     }
 
-    .project-card-right{
+    .flex-inverse{
         flex-direction: column-reverse !important;
     }
 
@@ -405,15 +390,19 @@ p, a{
     .wrapper{
         flex-direction: column;
         align-items: center;
-        gap: 0;
     }
 
-    .contact-left{
+    .left-column{
         width: 100%;
-        align-items: center;
+        padding: 0;
     }
 
-    .social{
+    .right-column{
+        width: 100%;
+        padding: 0;
+    }
+
+    .profile-list{
         flex-direction: row;
         justify-content: space-around;
     }
