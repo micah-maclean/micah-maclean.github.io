@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
     
 <head>
   <meta charset="utf-8">
@@ -20,24 +20,24 @@
     </div>
 
     <nav data-visible="false"> 
-        <ul class="no-list-style anchor-list">
+        <ul class="no-style-list anchor-list">
             <li>
-                <a class="anchor-link" href="#home-anchor">Home</a>
+                <a class="anchor-link" href="#home-anchor" data-i18n-key="home-anchor">Home</a>
             </li>
             <li>
-                <a class="anchor-link" href="#about-anchor">About</a>
+                <a class="anchor-link" href="#about-anchor" data-i18n-key="about-anchor">About</a>
             </li>
             <li>
-                <a class="anchor-link" href="#tools-anchor">Skills</a>
+                <a class="anchor-link" href="#tools-anchor" data-i18n-key="tools-anchor">Skills</a>
             </li>
             <li>
-                <a class="anchor-link" href="#project-anchor">Projects</a>
+                <a class="anchor-link" href="#project-anchor" data-i18n-key="project-anchor">Projects</a>
             </li>
             <li>
-                <a class="anchor-link" href="#contact-anchor">Contact</a>
+                <a class="anchor-link" href="#contact-anchor" data-i18n-key="contact-anchor">Contact</a>
             </li>
             <li>
-                <ul class="no-list-style">
+                <ul class="no-style-list">
                     <li> <!--Linkedin link-->
                         <a href="https://linkedin.com/in/2micah" target="_blank">
                             <i class="fab fa-linkedin fa-fw social-icon"></i>
@@ -55,27 +55,33 @@
                     </li>
                 </ul>
             </li>
+            <li> <!--Language selector -->
+                <select class="locale-selector">
+                    <option  value="pt">Portuguese</option>
+                    <option value="en">English</option>
+                </select>
+            </li>
         </ul>
     </nav>
 
     <section  class="home" id="home-anchor">
-        <h1 class="align-text-center home-title">Hi, I am Micah Maclean!</h1>
+        <h1 class="align-text-center home-title" data-i18n-key="greeting">Hi, I am Micah Maclean!</h1>
         <a href="#about-anchor"><i class="fas fa-arrow-circle-down fa-fw toogle-icon bounce-animation"></i></a>
     </section>
 
     <section class="about" id="about-anchor">
-        <h1 class="title">About me</h1>
-
-        <div class="wrapper">
-            <div class="body-text paragraph">
-                <p>Hello, I'm <b>Micah</b>. I am a highschool graduate with a passion for technology.</p>
-                <p>I started coding in highschool when I took Computer Science classes, and I fell in love with coding. I first learned to code in java with OOP fundaments, but I am now learning Web Development.</p>
-            </div>
-        </div>    
+        <h1 class="title" data-i18n-key="about-title">About me</h1>
+           
+            <div class="about-text body-text">
+                <div class="polaroid desktop">
+                    <div class="square-image"></div>
+                </div>
+                <p data-i18n-key="about-text">Hello, I'm <b>Micah</b>. I am a highschool graduate with a passion for technology. I started coding in highschool when I took Computer Science classes, and I fell in love with coding. I first learned to code in java with OOP fundaments, but I am now learning Web Development.</p>
+            </div>  
     </section>
 
     <section class="tools" id="tools-anchor">
-        <h1 class="title align-text-center">My Toolbox</h1>
+        <h1 class="title align-text-center" data-i18n-key="tools-title">My Toolbox</h1>
 
         <div class="grid-container">
             <div class="grid-item">
@@ -111,36 +117,36 @@
     </section>
 
     <section class="project" id="project-anchor">
-        <h1 class="title">Projects</h1>
+        <h1 class="title"  data-i18n-key="project-title">Projects</h1>
 
-        <div class="wrapper"><!--Flappybird Project-->
+        <div class="wrapper align-flex-center"><!--Flappybird Project-->
             <img class="project-image left-column" src="images/Flappy-bird.jpg">
 
             <div class="right-column align-text-left">
-                <h2 class="subtitle">Flappybird</h2>
-                <p class="body-text justify-text">In this project, I coded the once popular mobile game "Flappybird" in Processing.</p>
+                <h2 class="subtitle" data-i18n-key="flappybird-title">Flappybird</h2>
+                <p class="body-text justify-text" data-i18n-key="flappybird-description">In this project, I coded the once popular mobile game "Flappybird" in Processing.</p>
 
                 <a href="https://github.com/micah-maclean/Flappybird" target="_blank" class="button"><i class="fab fa-github"></i>
                     Github</a>
             </div>
         </div>
 
-        <div class="wrapper flex-inverse"><!--Chess Project-->
+        <div class="wrapper align-flex-center flex-inverse"><!--Chess Project-->
             <div class="left-column align-text-right">
-                <h2 class="subtitle">Chess</h2>
-                <p class="body-text justify-text">Final project coded in Java using Object-Orientated Programming fundamentals.</p>
+                <h2 class="subtitle" data-i18n-key="chess-title">Chess</h2>
+                <p class="body-text justify-text" data-i18n-key="chess-description">Final project coded in Java using Object-Orientated Programming fundamentals.</p>
                 <a href="https://github.com/micah-maclean/Chess" target="_blank" class="button"><i class="fab fa-github"></i>
                     Github</a> 
             </div>
             <img class="project-image right-column" src="images/Chess.png">   
         </div>
 
-        <div class="wrapper"><!--Tetris Project-->
+        <div class="wrapper align-flex-center"><!--Tetris Project-->
             <img class="project-image left-column" src="images/Tetris.png">
 
             <div class="right-column align-text-left">
-                <h2 class="subtitle">Tetris</h2>
-                <p class="body-text justify-text">Coded in Javascript following a basics tutorial.</p> 
+                <h2 class="subtitle" data-i18n-key="tetris-title">Tetris</h2>
+                <p class="body-text justify-text" data-i18n-key="tetris-description">Coded in Javascript following a basics tutorial.</p> 
 
                 <div>
                     <a href="https://github.com/micah-maclean/Tetris" target="_blank" class="button"><i class="fab fa-github"></i>
@@ -151,10 +157,10 @@
             </div>
         </div>
 
-        <div class="wrapper  flex-inverse"> <!--Todo Project-->
+        <div class="wrapper align-flex-center flex-inverse"> <!--Todo Project-->
             <div class="left-column align-text-right">
-                <h2 class="subtitle">Todo List</h2>
-                <p class="body-text justify-text">Coded in React following a basics tutorial.</p> 
+                <h2 class="subtitle" data-i18n-key="todo-title">Todo List</h2>
+                <p class="body-text justify-text" data-i18n-key="todo-description">Coded in React following a basics tutorial.</p> 
 
                 <div>
                     <a href="https://github.com/micah-maclean/Todo-App" target="_blank" class="button"><i class="fab fa-github"></i>
@@ -169,30 +175,30 @@
     </section>
 
     <section class="contact" id="contact-anchor">
-        <h1 class="title">Get in touch</h1>
+        <h1 class="title"  data-i18n-key="contact-title">Get in touch</h1>
 
         <div class="wrapper">
             <div class="left-column">
-                <p class="paragraph body-text justify-text">Thanks for stopping by! If you are looking to collaborate on a project or would like to chat further, please don't hesitate to reach out.</p>
+                <p class="paragraph body-text justify-text" data-i18n-key="contact-text">Thanks for stopping by! If you are looking to collaborate on a project or would like to chat further, please don't hesitate to reach out.</p>
                 
-                <h2 class="subtitle">Let's connect:</h2>
+                <h2 class="subtitle" data-i18n-key="connect">Let's connect:</h2>
                 <ul class="no-style-list profile-list">
                    <li> <!--Linkedin link-->
-                        <a href="https://linkedin.com/in/2micah" target="_blank">
+                        <a href="https://linkedin.com/in/2micah" target="_blank" class="profile-link">
                             <i class="fab fa-linkedin fa-fw social-icon"></i>
                             <p class="desktop body-text">Micah Maclean</p>
                         </a>
                    </li>
 
                    <li> <!--Github link-->
-                        <a href="https://github.com/micah-maclean" target="_blank">
+                        <a href="https://github.com/micah-maclean" target="_blank" class="profile-link">
                             <i class="fab fa-github fa-fw social-icon"></i>
                             <p class="desktop body-text">micah-maclean</p>
                         </a>
                    </li>
 
                    <li> <!--Discord link-->
-                        <a href="https://discordapp.com/users/773029646853341194" target="_blank">
+                        <a href="https://discordapp.com/users/773029646853341194" target="_blank" class="profile-link">
                             <i class="fab fa-discord fa-fw social-icon"></i>
                             <p class="desktop body-text">micah #4655</p>
                         </a>
@@ -203,23 +209,24 @@
 
             <!-- Send Direct Message Form -->
             <form  class="right-column email-form" action="https://formspree.io/f/mwkakzea" method="POST">
-                <label for="name" aria-required="true" class="visuallyHidden">Name:</label>
-                    <input class="name" type="text" name="name" id="name" required placeholder="Name*">
+                <label for="name" aria-required="true" class="visuallyHidden" data-i18n-key="name-label">Name:</label>
+                    <input class="name" type="text" name="name" id="name" required placeholder="Name*" data-i18n-key="name-placeholder">
 
-                <label for="_replyto" aria-required="true" class="visuallyHidden">Email:</label>
-                    <input class="email" type="email" name="_replyto" id="_replyto" required placeholder="Email*">
+                <label for="_replyto" aria-required="true" class="visuallyHidden" data-i18n-key="email-label">Email:</label>
+                    <input class="email" type="email" name="_replyto" id="_replyto" required placeholder="Email*" data-i18n-key="email-placeholder">
 
-                <label for="message" aria-required="true" class="visuallyHidden">Message:</label>
-                    <textarea class="message" name="message" id="message" required placeholder="Message*"></textarea>
+                <label for="message" aria-required="true" class="visuallyHidden" data-i18n-key="message-label">Message:</label>
+                    <textarea class="message" name="message" id="message" required placeholder="Message*" data-i18n-key="message-placeholder"></textarea>
 
-                <input class="button submit-button" type="submit" value="Message">
+                <input class="button submit-button" type="submit" value="Message" data-i18n-key="submit-button">
             </form>
         </div>  
     </section>
 
     <footer>
-        <p class="align-text-center footer-text">Designed and coded by Micah Maclean 2021</p>
+        <p class="align-text-center footer-text" data-i18n-key="footer">Designed and coded by Micah Maclean 2021</p>
     </footer>
 </body>
-    <script src="script.js"></script> 
+    <script src="script/menu.js"></script> 
+    <script src="script/translate.js"></script> 
 </html>
